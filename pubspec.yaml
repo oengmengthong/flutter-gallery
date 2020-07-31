@@ -1,0 +1,244 @@
+name: gallerywidget
+description: A new Flutter application.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.3
+  get_version: ^0.2.2
+  url_launcher: ^5.4.11
+  cached_network_image: ^2.2.0+1
+  provider: ^4.1.3
+  widget_with_codeview: ^1.0.3
+  youtube_player_flutter: ^7.0.0+6
+  font_awesome_flutter: ^8.8.1
+  eva_icons_flutter: ^2.0.1
+  flutter_spinkit: ^4.1.2+1
+  bubble_tab_indicator: ^0.1.4
+  flutter_rating_bar: ^3.0.1+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/
+    - lib/template/
+    - lib/widget/subScreenWidget/absorbPointer/
+    - lib/widget/subScreenWidget/alertDialog/
+    - lib/widget/subScreenWidget/align/
+    - lib/widget/subScreenWidget/animatedBuilder/
+    - lib/widget/subScreenWidget/animatedContainer/
+    - lib/widget/subScreenWidget/animatedCrossFade/
+    - lib/widget/subScreenWidget/animatedDefaultTextStyle/
+    - lib/widget/subScreenWidget/animatedList/
+    - lib/widget/subScreenWidget/animatedModalBarrier/
+    - lib/widget/subScreenWidget/animatedOpacity/
+    - lib/widget/subScreenWidget/animatedPhysicalModel/
+    - lib/widget/subScreenWidget/animatedPositioned/
+    - lib/widget/subScreenWidget/animatedSize/
+    - lib/widget/subScreenWidget/animatedWidget/
+    - lib/widget/subScreenWidget/animatedWidgetBaseState/
+    - lib/widget/subScreenWidget/appBar/
+    - lib/widget/subScreenWidget/aspectRatio/
+    - lib/widget/subScreenWidget/assetBundle/
+    - lib/widget/subScreenWidget/backdropFilter/
+    - lib/widget/subScreenWidget/baseline/
+    - lib/widget/subScreenWidget/bottomNavigationBar/
+    - lib/widget/subScreenWidget/bottomSheet/
+    - lib/widget/subScreenWidget/buttonBar/
+    - lib/widget/subScreenWidget/card/
+    - lib/widget/subScreenWidget/center/
+    - lib/widget/subScreenWidget/checkbox/
+    - lib/widget/subScreenWidget/chip/
+    - lib/widget/subScreenWidget/circularProgressIndicator/
+    - lib/widget/subScreenWidget/clipOval/
+    - lib/widget/subScreenWidget/clipPath/
+    - lib/widget/subScreenWidget/clipRect/
+    - lib/widget/subScreenWidget/column/
+    - lib/widget/subScreenWidget/constrainedBox/
+    - lib/widget/subScreenWidget/container/
+    - lib/widget/subScreenWidget/cupertinoActionSheet/
+    - lib/widget/subScreenWidget/cupertinoActivityIndicator/
+    - lib/widget/subScreenWidget/cupertinoAlertDialog/
+    - lib/widget/subScreenWidget/cupertinoButton/
+    - lib/widget/subScreenWidget/cupertinoContextMenu/
+    - lib/widget/subScreenWidget/cupertinoDatePicker/
+    - lib/widget/subScreenWidget/cupertinoDialog/
+    - lib/widget/subScreenWidget/cupertinoDialogAction/
+    - lib/widget/subScreenWidget/cupertinoFullscreenDialogTransition/
+    - lib/widget/subScreenWidget/cupertinoNavigationBar/
+    - lib/widget/subScreenWidget/cupertinoPageScaffold/
+    - lib/widget/subScreenWidget/cupertinoPageTransition/
+    - lib/widget/subScreenWidget/cupertinoPicker/
+    - lib/widget/subScreenWidget/cupertinoPopupSurface/
+    - lib/widget/subScreenWidget/cupertinoScrollbar/
+    - lib/widget/subScreenWidget/cupertinoSegmentedControl/
+    - lib/widget/subScreenWidget/cupertinoSlider/
+    - lib/widget/subScreenWidget/cupertinoSlidingSegmentedControl/
+    - lib/widget/subScreenWidget/cupertinoSwitch/
+    - lib/widget/subScreenWidget/cupertinoTabBar/
+    - lib/widget/subScreenWidget/cupertinoTabScaffold/
+    - lib/widget/subScreenWidget/cupertinoTabView/
+    - lib/widget/subScreenWidget/cupertinoTextField/
+    - lib/widget/subScreenWidget/cupertinoTimerPicker/
+    - lib/widget/subScreenWidget/customMultiChildLayout/
+    - lib/widget/subScreenWidget/customPaint/
+    - lib/widget/subScreenWidget/customScrollView/
+    - lib/widget/subScreenWidget/customSingleChildLayout/
+    - lib/widget/subScreenWidget/dataTable/
+    - lib/widget/subScreenWidget/dateTimePickers/
+    - lib/widget/subScreenWidget/decoratedBox/
+    - lib/widget/subScreenWidget/decoratedBoxTransition/
+    - lib/widget/subScreenWidget/defaultTextStyle/
+    - lib/widget/subScreenWidget/dismissible/
+    - lib/widget/subScreenWidget/divider/
+    - lib/widget/subScreenWidget/dragTarget/
+    - lib/widget/subScreenWidget/draggable/
+    - lib/widget/subScreenWidget/drawer/
+    - lib/widget/subScreenWidget/dropdownButton/
+    - lib/widget/subScreenWidget/excludeSemantics/
+    - lib/widget/subScreenWidget/expanded/
+    - lib/widget/subScreenWidget/expansionPanel/
+    - lib/widget/subScreenWidget/fadeTransition/
+    - lib/widget/subScreenWidget/fittedBox/
+    - lib/widget/subScreenWidget/flatButton/
+    - lib/widget/subScreenWidget/floatingActionButton/
+    - lib/widget/subScreenWidget/flow/
+    - lib/widget/subScreenWidget/flutterLogo/
+    - lib/widget/subScreenWidget/form/
+    - lib/widget/subScreenWidget/formField/
+    - lib/widget/subScreenWidget/fractionalTranslation/
+    - lib/widget/subScreenWidget/fractionallySizedBox/
+    - lib/widget/subScreenWidget/futureBuilder/
+    - lib/widget/subScreenWidget/gestureDetector/
+    - lib/widget/subScreenWidget/gridView/
+    - lib/widget/subScreenWidget/hero/
+    - lib/widget/subScreenWidget/icon/
+    - lib/widget/subScreenWidget/iconButton/
+    - lib/widget/subScreenWidget/ignorePointer/
+    - lib/widget/subScreenWidget/image/
+    - lib/widget/subScreenWidget/indexedStack/
+    - lib/widget/subScreenWidget/intrinsicHeight/
+    - lib/widget/subScreenWidget/intrinsicWidth/
+    - lib/widget/subScreenWidget/layoutBuilder/
+    - lib/widget/subScreenWidget/limitedBox/
+    - lib/widget/subScreenWidget/linearProgressIndicator/
+    - lib/widget/subScreenWidget/listBody/
+    - lib/widget/subScreenWidget/listTile/
+    - lib/widget/subScreenWidget/listView/
+    - lib/widget/subScreenWidget/longPressDraggable/
+    - lib/widget/subScreenWidget/materialApp/
+    - lib/widget/subScreenWidget/mediaQuery/
+    - lib/widget/subScreenWidget/mergeSemantics/
+    - lib/widget/subScreenWidget/navigator/
+    - lib/widget/subScreenWidget/nestedScrollView/
+    - lib/widget/subScreenWidget/notificationListener/
+    - lib/widget/subScreenWidget/offstage/
+    - lib/widget/subScreenWidget/opacity/
+    - lib/widget/subScreenWidget/outlineButton/
+    - lib/widget/subScreenWidget/overflowBox/
+    - lib/widget/subScreenWidget/padding/
+    - lib/widget/subScreenWidget/pageView/
+    - lib/widget/subScreenWidget/placeholder/
+    - lib/widget/subScreenWidget/popupMenuButton/
+    - lib/widget/subScreenWidget/positionedTransition/
+    - lib/widget/subScreenWidget/radio/
+    - lib/widget/subScreenWidget/raisedButton/
+    - lib/widget/subScreenWidget/rawImage/
+    - lib/widget/subScreenWidget/rawKeyboardListener/
+    - lib/widget/subScreenWidget/refreshIndicator/
+    - lib/widget/subScreenWidget/richText/
+    - lib/widget/subScreenWidget/rotatedBox/
+    - lib/widget/subScreenWidget/rotationTransition/
+    - lib/widget/subScreenWidget/row/
+    - lib/widget/subScreenWidget/scaffold/
+    - lib/widget/subScreenWidget/scaleTransition/
+    - lib/widget/subScreenWidget/scrollConfiguration/
+    - lib/widget/subScreenWidget/scrollable/
+    - lib/widget/subScreenWidget/scrollbar/
+    - lib/widget/subScreenWidget/semantics/
+    - lib/widget/subScreenWidget/simpleDialog/
+    - lib/widget/subScreenWidget/singleChildScrollView/
+    - lib/widget/subScreenWidget/sizeTransition/
+    - lib/widget/subScreenWidget/sizedBox/
+    - lib/widget/subScreenWidget/sizedOverflowBox/
+    - lib/widget/subScreenWidget/slideTransition/
+    - lib/widget/subScreenWidget/slider/
+    - lib/widget/subScreenWidget/sliverAppBar/
+    - lib/widget/subScreenWidget/snackBar/
+    - lib/widget/subScreenWidget/stack/
+    - lib/widget/subScreenWidget/stepper/
+    - lib/widget/subScreenWidget/streamBuilder/
+    - lib/widget/subScreenWidget/switch/
+    - lib/widget/subScreenWidget/tabBar/
+    - lib/widget/subScreenWidget/tabBarView/
+    - lib/widget/subScreenWidget/text/
+    - lib/widget/subScreenWidget/textField/
+    - lib/widget/subScreenWidget/theme/
+    - lib/widget/subScreenWidget/tooltip/
+    - lib/widget/subScreenWidget/transform/
+    - lib/widget/subScreenWidget/widgetsApp/
+    - lib/widget/subScreenWidget/wrap/
+  #   - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
