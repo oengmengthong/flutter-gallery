@@ -288,7 +288,8 @@ class Hotel {
   String location;
   String imageUrl;
   String price;
-  Hotel({this.name, this.location, this.imageUrl, this.price});
+  String description;
+  Hotel({this.name, this.location, this.imageUrl, this.price, this.description});
 }
 
 List<Hotel> dataHotels = [
@@ -296,31 +297,48 @@ List<Hotel> dataHotels = [
       name: "iRoHa Garden Hotel & Resort ",
       location: "No.8,Street 73, Sangkat Tonle Bassac, Chamkar Mon, Phnom Penh",
       imageUrl: "https://cf.bstatic.com/images/hotel/max1024x768/160/160842031.jpg",
-      price: "KHR 254,763"),
+      price: "KHR 254,763",
+      description:
+          "iRoHa Garden Hotel & Resort offers different themed accommodation in Phnom Penh. It features an outdoor swimming pool, tropical garden and spa. Meals are served at the in-house restaurant while free private parking is available. Free WiFi is available throughout the property."),
   Hotel(
-      name: "La Rose Suites",
-      location: "No.4B, St. 21, Sangkat Tonle Bassac, Khan Chamkarmon, Chamkar Mon, Phnom Penh",
-      imageUrl: "https://cf.bstatic.com/images/hotel/max1024x768/993/99370122.jpg",
-      price: "KHR 286,896"),
+    name: "La Rose Suites",
+    location: "No.4B, St. 21, Sangkat Tonle Bassac, Khan Chamkarmon, Chamkar Mon, Phnom Penh",
+    imageUrl: "https://cf.bstatic.com/images/hotel/max1024x768/993/99370122.jpg",
+    price: "KHR 286,896",
+    description:
+        "La Rose Suites offers spacious suites with four-poster beds in Phnom Penh. Featuring an outdoor pool and restaurant, the property has a 24-hour front desk, garden and provides free private parking. Free WiFi is available in all rooms.",
+  ),
   Hotel(
-      name: "Arunreas Hotel",
-      location: "163 street 51, Daun Penh, Phnom Penh",
-      imageUrl: "https://cf.bstatic.com/images/hotel/max1024x768/542/54227564.jpg",
-      price: "KHR 286,896"),
+    name: "Arunreas Hotel",
+    location: "163 street 51, Daun Penh, Phnom Penh",
+    imageUrl: "https://cf.bstatic.com/images/hotel/max1024x768/542/54227564.jpg",
+    price: "KHR 286,896",
+    description:
+        "Situated in the Daun Penh district, Arunreas Hotel offers accommodation in central Phnom Penh. Guests can enjoy meals at the in-house restaurant or have a drink at the bar. Free WiFi is available throughout the property.",
+  ),
   Hotel(
-      name: "Rosewood Phnom Penh",
-      location:
-          "Level 8th , Unit 1-2-3, Vattanac Capital Tower, No. 66, Preah Monivong Blvd, Sangkat Wat Phnom, Daun Penh, Phnom Penh",
-      imageUrl: "https://cf.bstatic.com/images/hotel/max1024x768/235/235610646.jpg",
-      price: "KHR 1,065,612"),
+    name: "Rosewood Phnom Penh",
+    location:
+        "Level 8th , Unit 1-2-3, Vattanac Capital Tower, No. 66, Preah Monivong Blvd, Sangkat Wat Phnom, Daun Penh, Phnom Penh",
+    imageUrl: "https://cf.bstatic.com/images/hotel/max1024x768/235/235610646.jpg",
+    price: "KHR 1,065,612",
+    description:
+        "Situated in Phnom Penh, adjacent to Vattanac Capital Mall, Rosewood Phnom Penh features rooms, 2 on-site restaurants and the skybar, Sora. Located around 500 m from Wat Phnom, the hotel is also 900 m away from Riverfront Park. The accommodation offers a 24-hour front desk and currency exchange for guests.",
+  ),
   Hotel(
-      name: "PAVILION",
-      location: "St 19, No. 227, Daun Penh, Phnom Penh",
-      imageUrl: "https://cf.bstatic.com/images/hotel/max1024x768/138/138190665.jpg",
-      price: "KHR 234,435"),
+    name: "PAVILION",
+    location: "St 19, No. 227, Daun Penh, Phnom Penh",
+    imageUrl: "https://cf.bstatic.com/images/hotel/max1024x768/138/138190665.jpg",
+    price: "KHR 234,435",
+    description:
+        "Located in central Phnom Penh, The Pavilion offers an adult-only accommodation with free WiFi throughout the property. This property is dedicated in responsible tourism, urban heritage conservation and cultural promotion. It features two poolside bar restaurants and a separate main restaurant. It has both an outdoor and shaded pool and provides in-house spa facilities.",
+  ),
   Hotel(
-      name: "The Plantation Urban Resort and Spa",
-      location: "# 28 Street 184, Daun Penh, Phnom Penh",
-      imageUrl: "https://cf.bstatic.com/images/hotel/max1024x768/855/85515792.jpg",
-      price: "KHR 265,583"),
+    name: "The Plantation Urban Resort and Spa",
+    location: "# 28 Street 184, Daun Penh, Phnom Penh",
+    imageUrl: "https://cf.bstatic.com/images/hotel/max1024x768/855/85515792.jpg",
+    price: "KHR 265,583",
+    description:
+        "Centrally located in Phnom Penh, The Plantation Urban Resort and Spa is situated directly behind the Royal Palace. It features two outdoor swimming pools and guests can enjoy meals at the in-house restaurant or have a drink at the bar. Free WiFi is available throughout the property.",
+  ),
 ];
