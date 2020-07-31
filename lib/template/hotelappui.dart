@@ -1,14 +1,14 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:gallerywidget/template/viewSourceCode.dart';
 import 'package:gallerywidget/values/style.dart';
 
-class FurnitureAppScreen extends StatefulWidget {
+class HotelAppUIScreen extends StatefulWidget {
   @override
-  _FurnitureAppScreenState createState() => _FurnitureAppScreenState();
+  _HotelAppUIScreenState createState() => _HotelAppUIScreenState();
 }
 
-class _FurnitureAppScreenState extends State<FurnitureAppScreen> {
+class _HotelAppUIScreenState extends State<HotelAppUIScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +19,7 @@ class _FurnitureAppScreenState extends State<FurnitureAppScreen> {
                   context,
                   CupertinoPageRoute(
                       builder: (context) =>
-                          ViewScourceCodeScreen(source: 'lib/template/furnitureapp.dart'))),
+                          ViewScourceCodeScreen(source: 'lib/template/hotelappui.dart'))),
               child: Row(
                 children: <Widget>[
                   Icon(Icons.code, color: Colors.blueAccent),
@@ -28,7 +28,7 @@ class _FurnitureAppScreenState extends State<FurnitureAppScreen> {
               )),
           FlatButton(
               onPressed: () => launchURL(
-                  'https://dribbble.com/shots/13919175-Furniture-app/attachments/5528865?mode=media'),
+                  'https://dribbble.com/shots/13911328-Hotel-App-UI/attachments/5520311?mode=media'),
               child: Row(
                 children: <Widget>[
                   Icon(Icons.link, color: Colors.blueAccent),

@@ -1,9 +1,13 @@
 
 import 'package:flutter/cupertino.dart';
+import 'package:gallerywidget/template/cafedeliveryapp.dart';
+import 'package:gallerywidget/template/doctorappointmentapp.dart';
 import 'package:gallerywidget/template/furnitureapp.dart';
 import 'package:gallerywidget/template/homeTrackPackage.dart';
+import 'package:gallerywidget/template/hotelappui.dart';
 import 'package:gallerywidget/template/hotelbooking.dart';
 import 'package:gallerywidget/template/passHub.dart';
+import 'package:gallerywidget/template/signupuipage.dart';
 
 class Template {
   String name;
@@ -38,25 +42,25 @@ List<Template> templateItem = [
     name: "Hotel App UI",
     imageUrl:
     "https://cdn.dribbble.com/users/2376202/screenshots/13911328/media/46b80ee4939d7219508b9a2fe8c8e015.jpg",
-    child: null,
+    child: HotelAppUIScreen(),
   ),
   Template(
     name: "Sign-Up Page",
     imageUrl:
     "https://cdn.dribbble.com/users/5290783/screenshots/13915608/media/9f00ea47489c0fe813172098d80f06c9.png",
-    child: null,
+    child: SignupPageScreen(),
   ),
   Template(
     name: "Cafe Delivery Application",
     imageUrl:
     "https://cdn.dribbble.com/users/3411685/screenshots/13917129/media/25bb5fce214cf65ddcfada589ccdfc17.png",
-    child: null,
+    child: CafeDeliveryAppScreen(),
   ),
   Template(
     name: "Doctor Appointment App",
     imageUrl:
     "https://cdn.dribbble.com/users/632944/screenshots/13902516/media/71be38f8336d3a1724b66bc5bcdf4bc4.png",
-    child: null,
+    child: DoctorAppointmentAppScreen(),
   ),
   Template(
     name: "CompApp Design Concept",
