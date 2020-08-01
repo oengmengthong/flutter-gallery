@@ -42,71 +42,69 @@ class _BaseViewTemplateScreenState extends State<BaseViewTemplateScreen> {
           )
         ],
       ),
-      body: SafeArea(
-        child: Column(
-          children: <Widget>[
-            Container(
-                child: SearchField(
-                    textController: textController,
-                    placeHolder: "Search Name Widget",
-                    onChanged: (value) => searchTemplatesProvider.search(textController.text))),
-            Expanded(
-              child: CustomScrollView(
-                primary: false,
-                slivers: <Widget>[
-                  SliverPadding(
-                    padding: const EdgeInsets.all(8),
-                    sliver: SliverGrid.count(
-                      crossAxisSpacing: 10,
-                      mainAxisSpacing: 10,
-                      crossAxisCount: 2,
-                      children: searchTemplatesProvider.listTemplate.map((item) {
-                        return InkWell(
-                            onTap: item.child == null ? null : () => Navigator.push(
-                                context, CupertinoPageRoute(builder: (context) => item.child)),
-                            child: Container(
-                              decoration: BoxDecoration(color: Colors.white, boxShadow: <BoxShadow>[
-                                BoxShadow(
-                                    blurRadius: 8,
-                                    offset: Offset(3, 3),
-                                    color: Colors.blueAccent.withOpacity(0.1))
-                              ]),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Container(
-                                    height: MediaQuery.of(context).size.width * 0.3,
+      body: Column(
+        children: <Widget>[
+          Container(
+              child: SearchField(
+                  textController: textController,
+                  placeHolder: "Search Name Widget",
+                  onChanged: (value) => searchTemplatesProvider.search(textController.text))),
+          Expanded(
+            child: CustomScrollView(
+              primary: false,
+              slivers: <Widget>[
+                SliverPadding(
+                  padding: const EdgeInsets.all(8),
+                  sliver: SliverGrid.count(
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    crossAxisCount: 2,
+                    children: searchTemplatesProvider.listTemplate.map((item) {
+                      return InkWell(
+                          onTap: item.child == null ? null : () => Navigator.push(
+                              context, CupertinoPageRoute(builder: (context) => item.child)),
+                          child: Container(
+                            decoration: BoxDecoration(color: Colors.white, boxShadow: <BoxShadow>[
+                              BoxShadow(
+                                  blurRadius: 8,
+                                  offset: Offset(3, 3),
+                                  color: Colors.blueAccent.withOpacity(0.1))
+                            ]),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Container(
+                                  height: MediaQuery.of(context).size.width * 0.3,
+                                  width: double.infinity,
+                                  child: Center(
+                                      child: CachedNetworkImage(
+                                    imageUrl: item.imageUrl,
                                     width: double.infinity,
-                                    child: Center(
-                                        child: CachedNetworkImage(
-                                      imageUrl: item.imageUrl,
-                                      width: double.infinity,
-                                      fit: BoxFit.cover,
-                                      height: MediaQuery.of(context).size.width * 0.3,
-                                      placeholder: (context, url) => CircularProgressIndicator(),
-                                      errorWidget: (context, url, error) => FlutterLogo(size: 60),
-                                    )),
+                                    fit: BoxFit.cover,
+                                    height: MediaQuery.of(context).size.width * 0.3,
+                                    placeholder: (context, url) => CircularProgressIndicator(),
+                                    errorWidget: (context, url, error) => FlutterLogo(size: 60),
+                                  )),
+                                ),
+                                Divider(),
+                                Expanded(
+                                    child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    item.name,
+                                    style: TextStyle(fontSize: 15, color: Colors.blueGrey),
                                   ),
-                                  Divider(),
-                                  Expanded(
-                                      child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text(
-                                      item.name,
-                                      style: TextStyle(fontSize: 15, color: Colors.blueGrey),
-                                    ),
-                                  ))
-                                ],
-                              ),
-                            ));
-                      }).toList(),
-                    ),
+                                ))
+                              ],
+                            ),
+                          ));
+                    }).toList(),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
