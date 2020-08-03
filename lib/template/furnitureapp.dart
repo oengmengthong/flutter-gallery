@@ -11,6 +11,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gallerywidget/template/viewSourceCode.dart';
 import 'package:gallerywidget/values/style.dart';
 
+import 'detialfurnitureapp.dart';
+
 class FurnitureAppScreen extends StatefulWidget {
   @override
   _FurnitureAppScreenState createState() => _FurnitureAppScreenState();
@@ -123,7 +125,6 @@ class _FurnitureAppScreenState extends State<FurnitureAppScreen> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    final double categoryHeight = size.height * 0.33;
     return Scaffold(
       appBar: AppBar(
         actions: <Widget>[
@@ -191,7 +192,7 @@ class _FurnitureAppScreenState extends State<FurnitureAppScreen> {
                 duration: const Duration(milliseconds: 0),
                 width: size.width,
                 alignment: Alignment.topCenter,
-                height: closeTopContainer ? 0 : categoryHeight,
+                height: closeTopContainer ? 0 : 225,
                 child: slideBarFurniture),
           ),
           Expanded(
@@ -222,7 +223,7 @@ class _SlideBarFurnitureState extends State<SlideBarFurniture> {
   int _current = 0;
   @override
   Widget build(BuildContext context) {
-    final double categoryHeight = double.infinity;
+    final double categoryHeight = 200;
 
     List<Widget> _listSlide = [
       Container(
@@ -323,46 +324,55 @@ class _SlideBarFurnitureState extends State<SlideBarFurniture> {
       ),
     ];
 
-    return Column(
-      children: <Widget>[
-        CarouselSlider(
-          options: CarouselOptions(
-              autoPlay: true,
-              enableInfiniteScroll: true,
-              enlargeCenterPage: true,
-              autoPlayInterval: Duration(seconds: 3),
-              autoPlayAnimationDuration: Duration(milliseconds: 800),
-              autoPlayCurve: Curves.fastOutSlowIn,
-              onPageChanged: (index, reason) {
-                setState(() {
-                  _current = index;
-                });
-              }),
-          items: _listSlide.map((item) => item).toList(),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(right: 16),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: _listSlide.map((url) {
-              int index = _listSlide.indexOf(url);
-              return FittedBox(
-                fit: BoxFit.fill,
-                alignment: Alignment.topCenter,
-                child: Container(
-                  width: 16.0,
-                  height: 5.0,
-                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: _current == index ? Colors.teal : Colors.grey.withOpacity(0.3),
-                  ),
-                ),
-              );
-            }).toList(),
+    return Container(
+      height: 225,
+      child: Column(
+        children: <Widget>[
+          CarouselSlider(
+            options: CarouselOptions(
+                height: categoryHeight,
+                autoPlay: true,
+                enableInfiniteScroll: true,
+                enlargeCenterPage: true,
+                autoPlayInterval: Duration(seconds: 3),
+                autoPlayAnimationDuration: Duration(milliseconds: 800),
+                autoPlayCurve: Curves.fastOutSlowIn,
+                onPageChanged: (index, reason) {
+                  setState(() {
+                    _current = index;
+                  });
+                }),
+            items: _listSlide
+                .map((item) => InkWell(
+                    onTap: () => Navigator.push(
+                        context, CupertinoPageRoute(builder: (context) => DetailFurnitureAppUI())),
+                    child: item))
+                .toList(),
           ),
-        ),
-      ],
+          Padding(
+            padding: const EdgeInsets.only(right: 16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: _listSlide.map((url) {
+                int index = _listSlide.indexOf(url);
+                return FittedBox(
+                  fit: BoxFit.fill,
+                  alignment: Alignment.topCenter,
+                  child: Container(
+                    width: 16.0,
+                    height: 5.0,
+                    margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: _current == index ? Colors.teal : Colors.grey.withOpacity(0.3),
+                    ),
+                  ),
+                );
+              }).toList(),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -375,12 +385,16 @@ class _Tile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: EdgeInsets.all(8),
-      child: FadeInImage.memoryNetwork(
-        placeholder: kTransparentImage,
-        fit: BoxFit.fitWidth,
-        image: 'https://picsum.photos/${size.width}/${size.height}/',
+    return InkWell(
+      onTap: () =>
+          Navigator.push(context, CupertinoPageRoute(builder: (context) => DetailFurnitureAppUI())),
+      child: Card(
+        margin: EdgeInsets.all(8),
+        child: FadeInImage.memoryNetwork(
+          placeholder: kTransparentImage,
+          fit: BoxFit.fitWidth,
+          image: 'https://picsum.photos/${size.width}/${size.height}/',
+        ),
       ),
     );
   }
