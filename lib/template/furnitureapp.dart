@@ -185,10 +185,10 @@ class _FurnitureAppScreenState extends State<FurnitureAppScreen> {
             ],
           ),
           AnimatedOpacity(
-            duration: const Duration(milliseconds: 200),
+            duration: const Duration(milliseconds: 0),
             opacity: closeTopContainer ? 0 : 1,
             child: AnimatedContainer(
-                duration: const Duration(milliseconds: 200),
+                duration: const Duration(milliseconds: 0),
                 width: size.width,
                 alignment: Alignment.topCenter,
                 height: closeTopContainer ? 0 : categoryHeight,
