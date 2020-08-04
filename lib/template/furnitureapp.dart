@@ -136,8 +136,8 @@ class _FurnitureAppScreenState extends State<FurnitureAppScreen> {
                           ViewScourceCodeScreen(source: 'lib/template/furnitureapp.dart'))),
               child: Row(
                 children: <Widget>[
-                  Icon(Icons.code, color: Colors.blueAccent),
-                  Text('Code', style: TextStyle(color: Colors.blueAccent))
+                  Icon(Icons.code, color: Colors.white),
+                  Text('Code', style: TextStyle(color: Colors.white))
                 ],
               )),
           FlatButton(
@@ -145,8 +145,8 @@ class _FurnitureAppScreenState extends State<FurnitureAppScreen> {
                   'https://dribbble.com/shots/13919175-Furniture-app/attachments/5528865?mode=media'),
               child: Row(
                 children: <Widget>[
-                  Icon(Icons.link, color: Colors.blueAccent),
-                  Text('Source UI', style: TextStyle(color: Colors.blueAccent))
+                  Icon(Icons.link, color: Colors.white),
+                  Text('Source UI', style: TextStyle(color: Colors.white))
                 ],
               )),
         ],

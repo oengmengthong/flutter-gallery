@@ -20,11 +20,11 @@ class _DetailFurnitureAppUIState extends State<DetailFurnitureAppUI> {
                   context,
                   CupertinoPageRoute(
                       builder: (context) =>
-                          ViewScourceCodeScreen(source: 'lib/template/detailfurnitureapp.dart'))),
+                          ViewScourceCodeScreen(source: 'lib/template/detialfurnitureapp.dart'))),
               child: Row(
                 children: <Widget>[
-                  Icon(Icons.code, color: Colors.blueAccent),
-                  Text('Code', style: TextStyle(color: Colors.blueAccent))
+                  Icon(Icons.code, color: Colors.white),
+                  Text('Code', style: TextStyle(color: Colors.white))
                 ],
               )),
           FlatButton(
@@ -32,8 +32,8 @@ class _DetailFurnitureAppUIState extends State<DetailFurnitureAppUI> {
                   'https://dribbble.com/shots/13919175-Furniture-app/attachments/5528865?mode=media'),
               child: Row(
                 children: <Widget>[
-                  Icon(Icons.link, color: Colors.blueAccent),
-                  Text('Source UI', style: TextStyle(color: Colors.blueAccent))
+                  Icon(Icons.link, color: Colors.white),
+                  Text('Source UI', style: TextStyle(color: Colors.white))
                 ],
               )),
         ],
@@ -41,6 +41,7 @@ class _DetailFurnitureAppUIState extends State<DetailFurnitureAppUI> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
+        color: Colors.black,
         child: Stack(
           children: <Widget>[
             Image.network(
@@ -164,6 +165,7 @@ class _DetailFurnitureAppUIState extends State<DetailFurnitureAppUI> {
     return Container(
       height: 25,
       width: 25,
+      margin: EdgeInsets.only(right: 8),
       decoration: BoxDecoration(
           shape: BoxShape.circle,
           border: Border.all(color: Colors.white70, width: 2),

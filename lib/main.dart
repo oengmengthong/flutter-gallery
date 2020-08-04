@@ -22,14 +22,14 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             appBarTheme: AppBarTheme(
                 brightness: Brightness.light,
-                elevation: 0.0,
 
-                color: Colors.transparent,
-                iconTheme: IconThemeData(color: Colors.teal),
+
+                color: Colors.teal,
+                iconTheme: IconThemeData(color: Colors.white),
                 textTheme: TextTheme(
                     // ignore: deprecated_member_use
                     title: TextStyle(
-                        color: Colors.teal, fontSize: 20, fontWeight: FontWeight.bold)))),
+                        color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)))),
         home: ListGalleryScreen(),
       ),
     );
