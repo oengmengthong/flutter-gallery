@@ -8,5 +8,6 @@ class Lists {
 final dataLists = [
   Lists(title: "Templates", image: "template"),
   Lists(title: "Widgets", image: "widget"),
+  Lists(title: "Catalog Widget", image: "widget"),
   Lists(title: "Others", image: "other"),
 ];

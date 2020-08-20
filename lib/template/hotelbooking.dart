@@ -13,8 +13,7 @@ class HotelBookingAppScreen extends StatefulWidget {
   _HotelBookingAppScreenState createState() => _HotelBookingAppScreenState();
 }
 
-class _HotelBookingAppScreenState extends State<HotelBookingAppScreen>
-    with SingleTickerProviderStateMixin {
+class _HotelBookingAppScreenState extends State<HotelBookingAppScreen> with SingleTickerProviderStateMixin {
   final List<Tab> tabs = <Tab>[
     Tab(text: 'Hotels'),
     Tab(text: 'Apartments'),

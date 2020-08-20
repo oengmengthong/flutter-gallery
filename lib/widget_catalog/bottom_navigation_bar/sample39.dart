@@ -1,0 +1,73 @@
+import 'package:fancy_bar/fancy_bar.dart';
+import 'package:flutter/material.dart';
+
+//fancy_bar: ^1.2.0
+class SampleBottomNavigationBar39 extends StatefulWidget {
+  @override
+  _SampleBottomNavigationBar39State createState() =>
+      _SampleBottomNavigationBar39State();
+}
+
+class _SampleBottomNavigationBar39State
+    extends State<SampleBottomNavigationBar39> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Sample 39')),
+      bottomNavigationBar: FancyBottomBar(
+        items: [
+          FancyItem(
+            textColor: Colors.orange,
+            title: 'Home',
+            icon: Icon(Icons.home),
+          ),
+          FancyItem(
+            textColor: Colors.red,
+            title: 'Trending',
+            icon: Icon(Icons.trending_up),
+          ),
+          FancyItem(
+            textColor: Colors.green,
+            title: 'Search',
+            icon: Icon(Icons.search),
+          ),
+          FancyItem(
+            textColor: Colors.brown,
+            title: 'Settings',
+            icon: Icon(Icons.settings),
+          ),
+        ],
+        onItemSelected: (index) {
+          print(index);
+        },
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'You have pushed the button this many times:',
+            ),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.display1,
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}

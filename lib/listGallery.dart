@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:gallerywidget/models/dataList.dart';
 import 'package:gallerywidget/template/baseViewTemplate.dart';
 import 'package:gallerywidget/widget/baseViewWidget.dart';
+import 'package:gallerywidget/widget_catalog/bottom_navigation_bar/lists.dart';
 import 'package:get_version/get_version.dart';
 
 import 'other/baseViewOther.dart';
@@ -53,6 +54,7 @@ class _ListGalleryScreenState extends State<ListGalleryScreen> {
               children: <Widget>[_boxList(), Text("Version : " + projectVersion + " Development")],
             ),
           ),
+
         ),
       ),
     );
@@ -77,6 +79,8 @@ class _ListGalleryScreenState extends State<ListGalleryScreen> {
                             return BaseViewTemplateScreen(lists: item);
                           } else if (title == "Widgets") {
                             return BaseViewWidgetScreen(lists: item);
+                          } else if (title == "Catalog Widget"){
+                            return ListsBottomNavigationStyle();
                           }
                           return BaseViewOtherScreen(lists: item);
                         })),
