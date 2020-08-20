@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -5,6 +6,7 @@ import 'package:gallerywidget/models/dataList.dart';
 import 'package:gallerywidget/template/baseViewTemplate.dart';
 import 'package:gallerywidget/widget/baseViewWidget.dart';
 import 'package:gallerywidget/widget_catalog/bottom_navigation_bar/lists.dart';
+import 'package:gallerywidget/widget_catalog/rootViewCatalog.dart';
 import 'package:get_version/get_version.dart';
 
 import 'other/baseViewOther.dart';
@@ -27,6 +29,7 @@ class _ListGalleryScreenState extends State<ListGalleryScreen> {
   void _getVersion() async {
     try {
       projectVersion = await GetVersion.projectVersion;
+      setState(() {});
     } on PlatformException {
       projectVersion = 'Failed to get project version.';
     }
@@ -45,16 +48,45 @@ class _ListGalleryScreenState extends State<ListGalleryScreen> {
                 brightness: Brightness.light,
                 backgroundColor: Colors.teal,
                 trailing: Image.asset("assets/images/flutter.png", height: 30),
-                largeTitle: Text('Flutter Gallery', style: TextStyle(color: Colors.white)),
+                largeTitle: Text('Flutter Gallery',
+                    style: TextStyle(color: Colors.white)),
               )
             ];
           },
           body: SafeArea(
             child: Column(
-              children: <Widget>[_boxList(), Text("Version : " + projectVersion + " Development")],
+              children: <Widget>[
+                _boxList(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Align(
+                      alignment: Alignment.bottomLeft,
+                      child: Container(
+                        height: 100,
+                        width: 100,
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              'https://roszkowski.dev/images/2020-05-04/flutter_logo_leg.gif',
+                          fit: BoxFit.fill,
+                          height: 50,
+                          width: 50,
+                          errorWidget: (context, url, error) =>
+                              FlutterLogo(size: 60),
+                        ),
+                      ),
+                    ),
+                    Spacer(),
+                    Align(
+                        alignment: Alignment.bottomRight,
+                        child: Text(
+                            "Version : " + projectVersion + " Development"))
+                  ],
+                ),
+              ],
             ),
           ),
-
         ),
       ),
     );
@@ -73,26 +105,28 @@ class _ListGalleryScreenState extends State<ListGalleryScreen> {
               crossAxisCount: 2,
               children: dataLists.map((item) {
                 return InkWell(
-                    onTap: () => Navigator.push(context, CupertinoPageRoute(builder: (context) {
+                    onTap: () => Navigator.push(context,
+                            CupertinoPageRoute(builder: (context) {
                           String title = item.title;
                           if (title == "Templates") {
                             return BaseViewTemplateScreen(lists: item);
                           } else if (title == "Widgets") {
                             return BaseViewWidgetScreen(lists: item);
-                          } else if (title == "Catalog Widget"){
-                            return ListsBottomNavigationStyle();
+                          } else if (title == "Catalogs") {
+                            return BaseViewCatalog(lists: item);
                           }
                           return BaseViewOtherScreen(lists: item);
                         })),
                     child: Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                          color: Colors.white, boxShadow: <BoxShadow>[
-                        BoxShadow(
-                            blurRadius: 8,
-                            offset: Offset(3, 3),
-                            color: Colors.teal.withOpacity(0.1))
-                      ]),
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.white,
+                          boxShadow: <BoxShadow>[
+                            BoxShadow(
+                                blurRadius: 8,
+                                offset: Offset(3, 3),
+                                color: Colors.teal.withOpacity(0.1))
+                          ]),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
