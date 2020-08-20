@@ -53,8 +53,8 @@ class _HotelBookingAppScreenState extends State<HotelBookingAppScreen> with Sing
                           ViewScourceCodeScreen(source: 'lib/template/hotelbooking.dart'))),
               child: Row(
                 children: <Widget>[
-                  Icon(Icons.code, color: Colors.blueAccent),
-                  Text('Code', style: TextStyle(color: Colors.blueAccent))
+                  Icon(Icons.code, color: Colors.white),
+                  Text('Code', style: TextStyle(color: Colors.white))
                 ],
               )),
           FlatButton(
@@ -62,8 +62,8 @@ class _HotelBookingAppScreenState extends State<HotelBookingAppScreen> with Sing
                   'https://dribbble.com/shots/13920074-Hotel-Booking-App/attachments/5529769?mode=media'),
               child: Row(
                 children: <Widget>[
-                  Icon(Icons.link, color: Colors.blueAccent),
-                  Text('Source UI', style: TextStyle(color: Colors.blueAccent))
+                  Icon(Icons.link, color: Colors.white),
+                  Text('Source UI', style: TextStyle(color: Colors.white))
                 ],
               )),
         ],

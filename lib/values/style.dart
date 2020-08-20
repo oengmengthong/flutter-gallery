@@ -21,6 +21,7 @@ Widget boxTextDisplay({Widget child, BuildContext context}) {
   );
 }
 
+
 launchURL(url) async {
   if (await canLaunch(url)) {
     await launch(url);

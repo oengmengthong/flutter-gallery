@@ -26,8 +26,8 @@ class _HomeTrackPackageTemplateState extends State<HomeTrackPackageTemplate> {
                           ViewScourceCodeScreen(source: 'lib/template/homeTrackPackage.dart'))),
               child: Row(
                 children: <Widget>[
-                  Icon(Icons.code, color: Colors.blueAccent),
-                  Text('Code', style: TextStyle(color: Colors.blueAccent))
+                  Icon(Icons.code, color: Colors.white),
+                  Text('Code', style: TextStyle(color: Colors.white))
                 ],
               )),
           FlatButton(
@@ -35,8 +35,8 @@ class _HomeTrackPackageTemplateState extends State<HomeTrackPackageTemplate> {
                   'https://dribbble.com/shots/12504809-Miber-Delivery-Tracking-App/attachments/4112685?mode=media'),
               child: Row(
                 children: <Widget>[
-                  Icon(Icons.link, color: Colors.blueAccent),
-                  Text('Source UI', style: TextStyle(color: Colors.blueAccent))
+                  Icon(Icons.link, color: Colors.white),
+                  Text('Source UI', style: TextStyle(color: Colors.white))
                 ],
               )),
         ],
@@ -45,7 +45,10 @@ class _HomeTrackPackageTemplateState extends State<HomeTrackPackageTemplate> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Center(child: Image.asset('assets/images/box.png', width: 70)),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Center(child: Image.asset('assets/images/box.png', width: 70)),
+            ),
             Center(
               child: Text('Track your\npackage',
                   textAlign: TextAlign.center,

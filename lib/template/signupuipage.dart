@@ -22,8 +22,8 @@ class _SignupPageScreenState extends State<SignupPageScreen> {
                           ViewScourceCodeScreen(source: 'lib/template/signupuipage.dart'))),
               child: Row(
                 children: <Widget>[
-                  Icon(Icons.code, color: Colors.blueAccent),
-                  Text('Code', style: TextStyle(color: Colors.blueAccent))
+                  Icon(Icons.code, color: Colors.white),
+                  Text('Code', style: TextStyle(color: Colors.white))
                 ],
               )),
           FlatButton(
@@ -31,8 +31,8 @@ class _SignupPageScreenState extends State<SignupPageScreen> {
                   'https://dribbble.com/shots/13915608-Sign-Up-Page/attachments/5524987?mode=media'),
               child: Row(
                 children: <Widget>[
-                  Icon(Icons.link, color: Colors.blueAccent),
-                  Text('Source UI', style: TextStyle(color: Colors.blueAccent))
+                  Icon(Icons.link, color: Colors.white),
+                  Text('Source UI', style: TextStyle(color: Colors.white))
                 ],
               )),
         ],

@@ -6,6 +6,7 @@ import 'package:gallerywidget/template/furnitureapp.dart';
 import 'package:gallerywidget/template/homeTrackPackage.dart';
 import 'package:gallerywidget/template/hotelappui.dart';
 import 'package:gallerywidget/template/hotelbooking.dart';
+import 'package:gallerywidget/template/icecreamapp.dart';
 import 'package:gallerywidget/template/passHub.dart';
 import 'package:gallerywidget/template/signupuipage.dart';
 
@@ -37,6 +38,12 @@ List<Template> templateItem = [
     imageUrl:
     "https://cdn.dribbble.com/users/2622747/screenshots/13919175/media/69783999fea7d6cc21ab46ee4c867f55.png",
     child: FurnitureAppScreen(),
+  ),
+  Template(
+    name: "Ice cream App",
+    imageUrl:
+    "https://static.dribbble.com/users/2067291/screenshots/7523165/media/fc06773e6ce9723612d8f3ecaffbf82f.png",
+    child: IceCreamUIApp(),
   ),
   Template(
     name: "Hotel App UI",
