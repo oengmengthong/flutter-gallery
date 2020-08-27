@@ -19,7 +19,6 @@ import "package:gallerywidget/widget_catalog/bottom_navigation_bar/sample24.dart
 import "package:gallerywidget/widget_catalog/bottom_navigation_bar/sample25.dart";
 import "package:gallerywidget/widget_catalog/bottom_navigation_bar/sample26.dart";
 import "package:gallerywidget/widget_catalog/bottom_navigation_bar/sample27.dart";
-import "package:gallerywidget/widget_catalog/bottom_navigation_bar/sample28.dart";
 import "package:gallerywidget/widget_catalog/bottom_navigation_bar/sample29.dart";
 import "package:gallerywidget/widget_catalog/bottom_navigation_bar/sample3.dart";
 import "package:gallerywidget/widget_catalog/bottom_navigation_bar/sample30.dart";
@@ -109,8 +108,6 @@ List<BottomNavigationDataList> dataBottomBars = [
       title: "motion_tab_bar", child: SampleBottomNavigationBar26()),
   BottomNavigationDataList(
       title: "bottom_nav", child: SampleBottomNavigationBar27()),
-  BottomNavigationDataList(
-      title: "ace_bottom_navigation_bar", child: SampleBottomNavigationBar28()),
   BottomNavigationDataList(
       title: "pandabar", child: SampleBottomNavigationBar29()),
   BottomNavigationDataList(

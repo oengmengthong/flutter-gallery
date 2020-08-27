@@ -1,6 +1,4 @@
 PODS:
-  - ace_bottom_navigation_bar (0.0.1):
-    - Flutter
   - Flutter (1.0.0)
   - flutter_inappwebview (0.0.1):
     - Flutter
@@ -20,7 +18,6 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
-  - ace_bottom_navigation_bar (from `.symlinks/plugins/ace_bottom_navigation_bar/ios`)
   - Flutter (from `Flutter`)
   - flutter_inappwebview (from `.symlinks/plugins/flutter_inappwebview/ios`)
   - get_version (from `.symlinks/plugins/get_version/ios`)
@@ -34,8 +31,6 @@ SPEC REPOS:
     - FMDB
 
 EXTERNAL SOURCES:
-  ace_bottom_navigation_bar:
-    :path: ".symlinks/plugins/ace_bottom_navigation_bar/ios"
   Flutter:
     :path: Flutter
   flutter_inappwebview:
@@ -52,7 +47,6 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/url_launcher/ios"
 
 SPEC CHECKSUMS:
-  ace_bottom_navigation_bar: 429829cda05444c71f74ce6ced16c33ee333d5dc
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   flutter_inappwebview: 69dfbac46157b336ffbec19ca6dfd4638c7bf189
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
