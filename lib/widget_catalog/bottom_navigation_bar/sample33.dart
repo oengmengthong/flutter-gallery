@@ -61,8 +61,8 @@ class _SampleBottomNavigationBar33State
         bottomNavigationBar: StyleProvider(
           style: Style(),
           child: ConvexAppBar(
-            height: 57,
-            top: -15,
+            height: 47,
+            top: -20,
             curveSize: 80,
             initialActiveIndex: 2,
             color: Colors.white,
