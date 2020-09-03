@@ -122,6 +122,12 @@ dependencies:
 
   fancy_bar: ^1.2.0
 
+  flutter_colorpicker: ^0.3.4
+
+  gradient_widgets: ^0.5.2
+
+  flutter_circle_color_picker: ^0.2.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

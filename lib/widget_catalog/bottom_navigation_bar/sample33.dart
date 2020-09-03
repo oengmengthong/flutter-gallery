@@ -15,6 +15,8 @@ class _SampleBottomNavigationBar33State
   List<TabItem> items = <TabItem>[
     TabItem(icon: Icons.home, title: 'Home'),
     TabItem(icon: Icons.map, title: 'Discovery'),
+    TabItem(icon: Icons.map, title: 'Discovery'),
+    TabItem(icon: Icons.map, title: 'Discovery'),
     TabItem(icon: Icons.plus_one, title: 'Add'),
   ];
 
@@ -38,7 +40,7 @@ class _SampleBottomNavigationBar33State
     Color(0xFF9E9E9E),
     Color(0xFF607D8B),
   ];
-  Color _tabBackgroundColor = paletteColors[5];
+  Color _tabBackgroundColor = Colors.teal;
 
   @override
   Widget build(BuildContext context) {
@@ -49,9 +51,7 @@ class _SampleBottomNavigationBar33State
         appBar: AppBar(title: const Text('Custom ConvexAppBar')),
         body: TabBarView(
           children: items
-              .map((i) => i.title == 'Discovery'
-                  ? paletteBody()
-                  : Center(
+              .map((i) => Center(
                       child: Text(
                       '<\t\t${i.title}\t\t>',
                       style: TextStyle(fontSize: 30),
@@ -61,17 +61,37 @@ class _SampleBottomNavigationBar33State
         bottomNavigationBar: StyleProvider(
           style: Style(),
           child: ConvexAppBar(
-            height: 50,
-            top: -30,
-            curveSize: 100,
-            style: TabStyle.fixedCircle,
+            height: 57,
+            top: -15,
+            curveSize: 80,
+            initialActiveIndex: 2,
+            color: Colors.white,
+            style: TabStyle.custom,
+            activeColor: Colors.white,
             items: [
-              TabItem(title: '2019', icon: Icons.link),
-              TabItem(icon: Icons.import_contacts),
-              TabItem(title: "2020", icon: Icons.work),
+              TabItem(
+                  icon: Icons.home,
+                  isIconBlend: true,
+                  activeIcon: Icon(Icons.home, size: 30)),
+              TabItem(
+                  icon: Icons.face,
+                  isIconBlend: true,
+                  activeIcon: Icon(Icons.face, size: 30)),
+              TabItem(
+                  icon: Icons.add,
+                  isIconBlend: true,
+                  activeIcon: Icon(Icons.add, size: 30)),
+              TabItem(
+                  icon: Icons.history,
+                  isIconBlend: true,
+                  activeIcon: Icon(Icons.history, size: 30)),
+              TabItem(
+                  icon: Icons.more_horiz,
+                  isIconBlend: true,
+                  activeIcon: Icon(Icons.more_horiz, size: 30)),
             ],
-            backgroundColor: _tabBackgroundColor,
-            cornerRadius: 25,
+            backgroundColor: Colors.cyan,
+            // cornerRadius: 25,
           ),
         ),
       ),
@@ -576,7 +596,8 @@ class DefaultAppBarDemo extends StatefulWidget {
   }
 }
 
-class _StateDefaultAppBarDemo extends State<DefaultAppBarDemo> with SingleTickerProviderStateMixin {
+class _StateDefaultAppBarDemo extends State<DefaultAppBarDemo>
+    with SingleTickerProviderStateMixin {
   static const kStyles = [
     ChoiceValue<TabStyle>(
       title: 'TabStyle.react',
@@ -708,37 +729,37 @@ class _StateDefaultAppBarDemo extends State<DefaultAppBarDemo> with SingleTicker
             controller: _tabController,
             children: _tabItems.value
                 .map((i) => i.title == 'Home' || i.title == 'Happy'
-                ? ListView(children: options)
-                : Center(
-                child: Text(
-                  '${i.title} World',
-                  style: TextStyle(fontSize: 30),
-                )))
+                    ? ListView(children: options)
+                    : Center(
+                        child: Text(
+                        '${i.title} World',
+                        style: TextStyle(fontSize: 30),
+                      )))
                 .toList(growable: false)),
         bottomNavigationBar: _badge == null
             ? ConvexAppBar(
-          items: _tabItems.value,
-          style: _style.value,
-          curve: _curve.value,
-          backgroundColor: _barColor,
-          gradient: _gradient,
-          controller: _tabController,
-          onTap: (int i) => debugPrint('select index=$i'),
-        )
+                items: _tabItems.value,
+                style: _style.value,
+                curve: _curve.value,
+                backgroundColor: _barColor,
+                gradient: _gradient,
+                controller: _tabController,
+                onTap: (int i) => debugPrint('select index=$i'),
+              )
             : ConvexAppBar.badge(
-          {3: _badge.text, 4: Icons.assistant_photo, 2: Colors.redAccent},
-          badgePadding: _badge.padding,
-          badgeColor: _badge.badgeColor,
-          badgeBorderRadius: _badge.borderRadius,
-          badgeMargin: EdgeInsets.only(bottom: 20, left: 30),
-          items: _tabItems.value,
-          style: _style.value,
-          curve: _curve.value,
-          backgroundColor: _barColor,
-          gradient: _gradient,
-          controller: _tabController,
-          onTap: (int i) => debugPrint('select index=$i'),
-        ),
+                {3: _badge.text, 4: Icons.assistant_photo, 2: Colors.redAccent},
+                badgePadding: _badge.padding,
+                badgeColor: _badge.badgeColor,
+                badgeBorderRadius: _badge.borderRadius,
+                badgeMargin: EdgeInsets.only(bottom: 20, left: 30),
+                items: _tabItems.value,
+                style: _style.value,
+                curve: _curve.value,
+                backgroundColor: _barColor,
+                gradient: _gradient,
+                controller: _tabController,
+                onTap: (int i) => debugPrint('select index=$i'),
+              ),
       ),
     );
   }

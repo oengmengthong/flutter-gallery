@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gallerywidget/providers/searchTemplates.dart';
 import 'package:gallerywidget/providers/searchWidgets.dart';
 import 'package:gallerywidget/widget_catalog/bottom_navigation_bar/sample32.dart';
+import 'package:gallerywidget/widget_catalog/bottom_navigation_bar/sample33.dart';
 import 'package:provider/provider.dart';
 
 import 'listGallery.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
           home: Directionality(
 //            textDirection: TextDirection.rtl,
              textDirection: TextDirection.ltr,
-            child: ListGalleryScreen()
+            child: SampleBottomNavigationBar33()
           ),
         ));
   }
